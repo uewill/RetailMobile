@@ -1,0 +1,3 @@
+rootProject.name = 'RetailMobile'
+
+include ':app'
