@@ -4,8 +4,8 @@ import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator } from 'react-navigation';
 
-import AppColor from '../common/theme';
-import HomeScreen from './home';
+import AppColor from '../../common/theme';
+import HomeScreen from '../home/home';
 import SettingScreen from '../setting/index';
 
 export default createBottomTabNavigator(

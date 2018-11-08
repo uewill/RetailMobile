@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Button ,StyleSheet} from 'react-native';
-import {getDpSize} from '../utils/screenUtil';
+import storageUtil from '../../utils/storageUtil';
 
 
 export default class HomeScreen extends React.Component {
@@ -9,16 +9,18 @@ export default class HomeScreen extends React.Component {
     };
     render() {
         return (<View>
-            <Button title="设置" style={sytles.btn} onPress={this._Test} />
+            <Button title="设置" style={sytles.btn} onPress={this._Test.bind(this)} />
         </View>);
     }
     _Test(){
-        alert('hello');
+        console.log(this);
+        storageUtil.setItem("authData",'');
+        this.props.navigation.navigate('SignIn');
     }
 }
 const sytles=StyleSheet.create({
     btn:{
-        width:getDpSize(10)
+        width:10
     }
 
 });

@@ -1,7 +1,10 @@
 import { AppRegistry } from 'react-native';
-import App from './src/App';
-
 import { YellowBox } from 'react-native';
-YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+import Root from './src/Root';
 
-AppRegistry.registerComponent('RetailMobile', () => App);
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+YellowBox.ignoreWarnings(['Warning: componentWillReceiveProps is deprecated', 'Module RCTImageLoader']);
+YellowBox.ignoreWarnings(['Warning: componentWillUpdate is deprecated', 'Module RCTImageLoader']);
+
+
+AppRegistry.registerComponent('RetailMobile', () =>Root);
